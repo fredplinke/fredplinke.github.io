@@ -42,7 +42,6 @@ Email: <input name="email" required="" size="60" type="email"/>
  function identify(e){
  
    e.preventDefault();
-   var ident = form["fullname"].value;
    var form = e.target;
    var email = form["email"].value;
    var fullname = form["fullname"].value;
@@ -52,7 +51,7 @@ Email: <input name="email" required="" size="60" type="email"/>
      name: fullname
    };
 // Identify call
-    analytics.identify(ident, {
+    analytics.identify('65432', {
       email: email,
       name: fullname,
       shoeType: shoeType
